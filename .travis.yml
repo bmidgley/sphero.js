@@ -1,11 +1,19 @@
 language: node_js
 sudo: false
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+    - g++-4.8-multilib
+    - gcc-multilib
 node_js:
   - '0.10'
   - '0.12'
   - '4.0'
   - '4.1'
-  - '4.2'  
+  - '4.2'
   - '5.0'
 matrix:
   allow_failures:
